@@ -1,0 +1,230 @@
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      box-sizing: border-box;
+  }
+  .menuContainer {
+    position: relative;
+    z-index: 999;
+      display: inline-block;
+      cursor: pointer;
+      width: 92px;
+      height: 92px;
+      background-color: #be9b7b;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
+      position: relative;
+      left: 28%;
+      top: 21%;
+    }
+    
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+  .menu-bar{
+      display: none;
+      z-index: 1;
+      background-color: #be9b7b;
+      color: white;
+      width: 0%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      padding-top: 7%;
+      text-align: center;
+      font-size: 1.5rem;
+      animation: menuOpenAnimation 0.5s;
+      
+  }
+
+  @keyframes menuOpenAnimation{
+    0%{
+      width: 0%;
+      height: 0vh;
+    }
+    100%{
+      width: 20%;
+      height: 100vh;
+
+    }
+  }
+
+  
+  .menu-bar ul li{
+      padding-top: 10px;
+  }
+  .menu-bar ul li a{
+      text-decoration: none;
+      color: white;
+  }
+
+  .videoSection{
+      position: absolute;
+      background-color: #434343;
+      z-index: -999;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+  }
+
+  .videoSection video{
+      opacity: 0.2;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+  }
+
+  .row.tMainTxt{
+    display: inline-flex;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  .tMainTxt .captionTxt{
+    width: 60%;
+    font-size: 3rem;
+    color: #be9b7b;
+    justify-content: center;
+    display: grid;
+    left: 9%;
+  }
+
+.tMainTxt .captionTxt button{
+  background-color: transparent;
+  color: white;
+  border: 3px solid #be9b7b;
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.tMainTxt .captionTxt button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #be9b7b;
+
+  -webkit-box-shadow:inset 0px 0 0 0px rgba(23, 138, 203, 0);
+  box-shadow:inset 0px 0 0 0px rgba(23, 138, 203, 0);
+}
+
+.tMainTxt .col.socialNetwork{
+  display: grid;
+  height: 20vh;
+  justify-content: end;
+}
+.tMainTxt .socialNetwork i{
+  color: #be9b7b;
+  font-size: 2rem;
+}
+
+.tMainTxt .socialNetwork i:hover{
+  transform: rotate(360deg);
+  color: white;
+  transition: all 1s;
+}
+.tMainTxt .bottle{
+  text-align: end;
+}
+
+.tMainTxt .bottle #bottle{
+  width: 29%;
+}
+
+.arrowDown{
+  width: 10%;
+  margin-left: 45%;
+  text-align: center;
+  color: white;
+  margin-top: 5%;
+
+}
+.arrowDown svg{
+  width: 30%;
+  transform: rotate(90deg);
+  animation: arrowInfiniteAnimation 0.5s infinite;
+  animation-direction: alternate;
+}
+@keyframes arrowInfiniteAnimation{
+  0%{
+    margin-top: -3%;
+  }
+  100%{
+    margin-top: 3%;
+  }
+}
+
+.white {
+  height: 78vh;
+  width: 100%;
+  margin-top: 400px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+}
+
+.flasa .flasa1{  
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.5 ease;
+  background:yellow;
+}
+
+.flasa:hover{ 
+  transform:rotateY(180deg) ;
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #333;
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: yellow;
+  color: #333;
+  transform:rotateY(180deg) ;
+}
+
+.flasa img{
+  height: 400px;
+}
+
+
+
+  
+
